@@ -8,6 +8,7 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "classnames": "^2.2.5",
     "react-router-dom": "^4.1.0",
     "react-scripts": "0.9.5"
   },
