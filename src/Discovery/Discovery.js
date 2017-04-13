@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
+import Suggest from '../Suggest/Suggest';
 
 class Discovery extends Component {
   render() {
@@ -18,6 +19,8 @@ class Discovery extends Component {
         <div>hrefが指定されたButton: <Button href="http://reactjs.com">フォローする</Button></div>
         <div>クラス名が指定されたButton: <Button className="custom">何もしません</Button></div>
 
+        <h2>Suggest</h2>
+        <div><Suggest options={['eenie', 'meenie', 'miney', 'mo']} /></div>
       </div>
     )
   }
