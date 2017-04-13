@@ -3,6 +3,7 @@ import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
 import Suggest from '../Suggest/Suggest';
 import Rating from '../Rating/Rating';
+import FormInput from '../FormInput/FormInput';
 
 class Discovery extends Component {
   render() {
@@ -28,6 +29,41 @@ class Discovery extends Component {
         <div>初期値4： <Rating defaultValue={4} /></div>
         <div>最大値11： <Rating max={11} /></div>
         <div>読み取り専用： <Rating readonly={true} defaultValue={3} /></div>
+
+
+        <h2>Form inputs</h2>
+        <table><tbody>
+            <tr>
+              <td>単純な入力フィールド</td>
+              <td><FormInput /></td>
+            </tr>
+            <tr>
+              <td>デフォルト値</td>
+              <td><FormInput defaultValue="it's like a default" /></td>
+            </tr>
+            <tr>
+              <td>年の入力</td>
+              <td><FormInput type="year" /></td>
+            </tr>
+            <tr>
+              <td>評価</td>
+              <td><FormInput type="rating" defaultValue={4} /></td>
+            </tr>
+            <tr>
+              <td>入力候補</td>
+              <td>
+                <FormInput
+                  type="suggest"
+                  options={['red', 'green', 'blue']}
+                  defaultValue="green"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>単純なテキストエリア</td>
+              <td><FormInput type="text" /></td>
+            </tr>
+        </tbody></table>
       </div>
     )
   }
