@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
 import Suggest from '../Suggest/Suggest';
+import Rating from '../Rating/Rating';
 
 class Discovery extends Component {
   render() {
@@ -21,6 +22,12 @@ class Discovery extends Component {
 
         <h2>Suggest</h2>
         <div><Suggest options={['eenie', 'meenie', 'miney', 'mo']} /></div>
+
+        <h2>Rating</h2>
+        <div>初期値なし： <Rating /></div>
+        <div>初期値4： <Rating defaultValue={4} /></div>
+        <div>最大値11： <Rating max={11} /></div>
+        <div>読み取り専用： <Rating readonly={true} defaultValue={3} /></div>
       </div>
     )
   }
