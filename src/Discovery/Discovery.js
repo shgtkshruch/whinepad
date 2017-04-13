@@ -4,6 +4,7 @@ import Button from '../Button/Button';
 import Suggest from '../Suggest/Suggest';
 import Rating from '../Rating/Rating';
 import FormInput from '../FormInput/FormInput';
+import Form from '../Form/Form';
 
 class Discovery extends Component {
   render() {
@@ -64,6 +65,26 @@ class Discovery extends Component {
               <td><FormInput type="text" /></td>
             </tr>
         </tbody></table>
+
+
+        <h2>Form</h2>
+
+        <Form
+          fields={[
+            {label: '評価', type: 'rating', id: 'rateme'},
+            {label: 'あいさつ', type: 'input', id: 'freetext'},
+          ]}
+          initialData={{rateme: 4, freetext: 'こんにちは'}} />
+
+        <h2>Form readonly</h2>
+
+        <Form
+          fields={[
+            {label: '評価', type: 'rating', id: 'rateme'},
+            {label: 'あいさつ', type: 'input', id: 'freetext'},
+          ]}
+          initialData={{rateme: 4, freetext: 'こんにちは'}}
+          readonly={true} />
       </div>
     )
   }
